@@ -1,0 +1,10 @@
+<h1> My Profile </h1>
+
+    <%= simple_form_for @user do |f| %>
+
+      Upload a profile picture:
+
+     <%= f.input :avatar %>
+     <%= f.button :submit %>
+
+     <% end %>

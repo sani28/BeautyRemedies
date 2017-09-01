@@ -1,0 +1,35 @@
+  <%# -------------- P R O D U C T  R E V I E W  F O R M ----------------------  %>
+
+<div class="product-review-form">
+
+  <h1>New Product Review</h1>
+
+  <%# if current_user %>
+     <!-- Rating: <%# rating_for @product, 'ratings', star: 5, enable_half: true %> -->
+   <%# end %>
+
+  <%= simple_form_for @product_review do |f| %>
+
+  <br/>
+    <div id="raty"></div>
+  <br/>
+
+  <div id="productSelect" data-initially-selected-product-id="<%= @product_id %>">
+    <select id="productSelector" name="product_review[product_id]" style="width: 100%">
+      <% Product.all.each do |product| %>
+        <option/>
+        <option value=<%= product.id %>>
+          <%= product.name %>
+        </option>
+      <% end %>
+    </select>
+  </div>
+
+  <p><%= link_to "Can't find your product? Click here to create a new one", new_product_path %></p>
+ <%# associcates to product, adds to current value of product rating  %>
+  <%= f.input :positive_comment %>
+  <%= f.input :negative_comment %>
+
+  <%= f.submit %>
+  <% end %>
+</div>

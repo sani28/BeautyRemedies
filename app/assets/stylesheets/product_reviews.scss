@@ -1,0 +1,39 @@
+// Place all the styles related to the ProductReviews controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.product-review-form {
+  width: 100%;
+  margin-top: 100px;
+  text-decoration: none;
+}
+
+
+#new_product_review {
+  width: 100%;
+}
+
+#product_review_positive_comment {
+  width: 100%;
+}
+
+
+#product_review_negative_comment {
+  width: 100%;
+}
+
+#product_review_product_attributes_name {
+  width: 100%;
+}
+
+#product_review_product_attributes_brand {
+  width: 100%;
+}
+
+#product_review_product_attributes_place_of_purchase {
+  width: 100%;
+}
+
+.select2-selection__rendered {
+  width: 100%;
+}

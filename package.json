@@ -1,5 +1,12 @@
 {
   "name": "BeautyRemedies",
   "private": true,
-  "dependencies": {}
+  "dependencies": {
+    "bootstrap": "^3.3.7",
+    "jquery": "^3.2.1",
+    "semantic-ui-card": "^2.2.12",
+    "semantic-ui-css": "^2.2.12",
+    "semantic-ui-icon": "^2.2.12",
+    "semantic-ui-image": "^2.2.12"
+  }
 }

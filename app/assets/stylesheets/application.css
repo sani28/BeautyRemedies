@@ -11,5 +11,35 @@
  * It is generally better to create a new file per style scope.
  *
  *= require_tree .
+ *= require select2
  *= require_self
+ *= require select2-bootstrap
+ *= require font-awesome
+
  */
+ @import "semantic-ui";
+ @import "semantic-ui-card";
+ @import "semantic-ui-icon";
+ @import "font-awesome";
+ @import "semantic-ui-image";
+ @import "bootstrap";
+
+* {
+  font-family: 'Source Code Pro', monospace;
+  font-size: 10.5px;
+  font-kerning: 20;
+  text-decoration: none;
+  color: black;
+
+}
+
+.beauty_remedies {
+  width: 310px;
+  margin-left: -30px;
+  position: absolute;
+}
+
+.products {
+  margin: 23px;
+  width: 13%;
+}

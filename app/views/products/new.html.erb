@@ -1,0 +1,51 @@
+<h1>New Product</h1>
+
+<%= simple_form_for @product do |prod| %>
+
+  <%# product nested forms %>
+  <%=  prod.input :name, placeholder: "name of product" %> <%# adds unique name for product in product table  %>
+  <%#= f.input :brand %> <%# adds to an array of brands %>
+  <%# #TODO: gecode location of purchase in display page  %>
+  <%#= f.input :place_of_purchase %>   <%# adds to an array of addresses %>
+
+    <%= prod.input :brand %>
+    <%= prod.input :place_of_purchase %>
+    <%= prod.file_field :images, multiple:true %>
+    <%= prod.file_field :images, multiple:true %>
+  <%# -------------- submits into seperate "products" table ----------------------  %>
+
+  <%# #TODO: upload image + caption it ? %>
+
+
+  <!-- <%# skin care or make up? %>
+  <%#= f.association :categories, label_method: lambda { |obj| render obj } %> <%# classifies product as skin type or make up  %>
+
+  <%# makeup category or skin catagory %>
+  <%#= f.input :makeup_category, as: :select %> <%# classifies makeup product  %>
+  <%#= f.input :skincare_category, as: :select %> <%# classifies skincare product  %>
+
+  <%# makeup sub sub category or skincare subcategory %>
+  <%#= f.input :makeup_sscateg, as: :select %> <%# classifies makeup product furthur  %>
+  <%#= f.input :skincare_sscateg, as: :select %> <%# classifies skincare product furthur  %>
+  -->
+
+  <%# #TODO: add states - draft to publish  %>
+    <div id="categorySelect">
+        <select id="tagSelector" name="category_id" style="width: 100%">
+          <% Category.all.each do |category| %>
+           <option/>
+            <option value=<%= category.id%>>
+              <%= category.product_type %>
+            </option>
+          <% end %>
+        </select>
+
+        <div id="subCategorySelect">
+
+        </div>
+      </div>
+
+
+  <%= prod.submit({class: "btn btn-primary"}) %>
+
+<% end %>

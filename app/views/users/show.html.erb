@@ -1,0 +1,23 @@
+
+<h1>My Profile</h1>
+
+<div class="user-avatar">
+
+<center>
+
+<%= image_tag @user.avatar.medium.url, :class => "circular-image" if @user.avatar.present? %>
+<div id="user-description">
+
+        <%= @user.first_name %>
+        <%= @user.last_name %>
+</div>
+</center>
+</div>
+<div class="user-navbar">
+
+</div>
+
+
+<div class="user-navbar">
+
+</div>
